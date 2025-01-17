@@ -17,4 +17,9 @@ describe("Password validation", () => {
 		const result = fonction.isValid("abcdefgh");
 	  	expect(result).toBe(false);
 	});
+
+	it("should return false for passwords containing 'ipl'", () => {
+		const result = fonction.isValid("123ipl45");
+	  	expect(result).toBe(false);
+	});
 });
