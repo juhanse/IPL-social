@@ -1,11 +1,12 @@
-Hanse Julien
+Julien Hanse
 
-julien.hanse@student.vinci.be
+`julien.hanse@student.vinci.be`
 
+Lien du dépôt Git :
 https://github.com/juhanse/IPL-social
 
-Un paragraphe d’explication de votre code, 
+Ce projet consiste à réaliser un vérificateur de mot de passe pour le site web de l’IPL.
 
-Une ligne de commande permettant de lancer l’exécution des tests, 
-
-Tout ce que vous jugerez nécessaire à ajouter dans le fichier. 
+Commande :
+`npm install`
+`npm run test`
