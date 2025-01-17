@@ -1,8 +1,10 @@
-import { isPasswordValid } from '../passwordChecker';
+import { PasswordChecker } from "../passwordChecker.js";
 
 describe("Password validation", () => {
+	const fonction = new PasswordChecker();
+
 	it("should return false for passwords shorter than 8 characters", () => {
-		const result = isPasswordValid("Ab@1");
-	  	expect(result.toBe(false));
+		const result = fonction.isValid("1234567");
+	  	expect(result).toBe(false);
 	});
 });
