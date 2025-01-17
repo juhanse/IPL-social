@@ -7,4 +7,9 @@ describe("Password validation", () => {
 		const result = fonction.isValid("1234567");
 	  	expect(result).toBe(false);
 	});
+
+	it("should return false for passwords without special characters", () => {
+		const result = fonction.isValid("abcdefgh");
+	  	expect(result).toBe(false);
+	});
 });
