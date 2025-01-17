@@ -12,4 +12,9 @@ describe("Password validation", () => {
 		const result = fonction.isValid("abcdefgh");
 	  	expect(result).toBe(false);
 	});
+
+	it("should return false for passwords without numbers", () => {
+		const result = fonction.isValid("abcdefgh");
+	  	expect(result).toBe(false);
+	});
 });
