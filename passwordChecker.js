@@ -1,10 +1,21 @@
 export class PasswordChecker {
+	checkLength(password) {
+		return password.length >= 8;
+	}
+
+	checkSpecialChar(password) {
+		return /[!@#$%^&*(),.?":{}|<>]/.test(password);
+	}
+
+	checkNumbers(password) {
+		return /\d/.test(password);
+	}
+
+	checkIPL(password) {
+		return !/ipl/i.test(password);
+	}
+
 	isValid(password) {
-		if (password.length < 8) return false;
-		if (password.search(/[a-z]/) < 1) return false;
-		if (password.search(/[0-9]/) === -1) return false;
-		if (password.toLowerCase().includes("ipl")) return false;
-		
-		return true;
+		return this.checkLength(password) && this.checkSpecialChar(password) && this.checkNumbers(password) && this.checkIPL(password);
 	}
 }
