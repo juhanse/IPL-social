@@ -1,4 +1,4 @@
-import { isPasswordValid } from './passwordChecker';
+import { isPasswordValid } from '../passwordChecker';
 
 describe("Password validation", () => {
 	it("should return false for passwords shorter than 8 characters", () => {
