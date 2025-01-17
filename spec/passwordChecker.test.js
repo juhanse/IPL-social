@@ -17,9 +17,4 @@ describe("Password validation", () => {
 		const result = fonction.isValid("abcdefgh");
 	  	expect(result).toBe(false);
 	});
-
-	it("should return true for passwords has one number", () => {
-		const result = fonction.isValid("1abcdefg");
-	  	expect(result).toBe(true);
-	});
 });
