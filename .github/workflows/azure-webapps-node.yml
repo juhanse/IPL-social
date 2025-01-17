@@ -15,13 +15,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-
-    - name: npm install and test
-      run: |
-        npm install
-        npm run test --if-present
+    - name: Install depencies
+      run: npm install
+    - name: Starting pipeline
+      run: echo "Pipeline started at $(date)"
+    - name: Test and coverage with Jasmine
+      run: npm run test
+    - name: Build
+      run: npm run build
+    - name: Display end of pipeline
+      run: echo "Pipeline ended at $(date)"
+    - name: Success message
+      run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
